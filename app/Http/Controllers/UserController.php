@@ -40,7 +40,7 @@ class UserController extends Controller
     public function patch(Request $request) {
         if ($request->password)
             $this->validate($request, [
-                'password' => 'required|string|min:6|confirmed',
+                'password' => 'required|string|min:8|confirmed',
                 'current_password' => 'sometimes|required|string|min:6'
             ]);
         $data = $request->all();
